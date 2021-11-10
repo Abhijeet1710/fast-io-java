@@ -61,9 +61,14 @@ public class Main{
         try {
             FastReader in=new FastReader();
             FastWriter out = new FastWriter();
-            int testCases=in.nextInt();
-            while(testCases-- > 0){
+            //int tc=in.nextInt();
+            int tc = 1;
+            while(tc-- > 0){
                 // write code here
+                int a = in.nextInt();
+                String b = in.nextLine();
+                
+                out.println(a+" "+b);
             }
             out.close();
         } catch (Exception e) {
@@ -71,4 +76,3 @@ public class Main{
         }
     }
 }
-
