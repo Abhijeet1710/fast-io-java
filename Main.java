@@ -76,4 +76,26 @@ public class Main{
     private static solve() {
       
     }
+	
+	
+class sortByItem implements Comparator<Node> {
+        public int compare(Node a, Node b)
+        {
+            if(a.item > b.item) return 1;
+            return -1;
+        }
+    }
+    
+  class Node {
+        
+        int ind;
+        int item;
+        boolean liked;
+        
+        public Node(int i, int e, char lik ) {
+            ind = i;
+            item = e;
+            liked = (lik == '1') ? true : false;
+        }
+    }
 }
