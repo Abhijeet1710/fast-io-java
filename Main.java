@@ -2,6 +2,8 @@ import java.util.*;
 import java.io.*;
 
 public class Main{
+    static FastReader in;
+    static FastWriter out;
     static class FastReader{
         BufferedReader br;
         StringTokenizer st;
@@ -57,55 +59,21 @@ public class Main{
 			bw.close();
 		}
 	}
-	public static int lb(int arr[], int N, int X)  {
-      
-        int mid;
-        int low = 0;
-        int high = N;
- 
-        while (low < high) {
-            mid = low + (high - low) / 2;
-            if (X <= arr[mid]) high = mid;
-            else low = mid + 1;
-        }
-   
-        if(low < N && arr[low] < X) low++;
-    
-        return low;
-    }
-    
-    public static int ub(int arr[], int N, int X)  {
-      
-        int mid;
-        int low = 0;
-        int high = N;
- 
-        while (low < high) {
-            mid = low + (high - low) / 2;
-            if (X >= arr[mid]) low = mid+1;
-            else high = mid;
-        }
-   
-        if(low < N && arr[low] <= X) low++;
-    
-        return low;
-    }
+	  
     public static void main(String[] args) {
         try {
-            FastReader in=new FastReader();
-            FastWriter out = new FastWriter();
+            in=new FastReader();
+            out = new FastWriter();
             //int tc=in.nextInt();
             int tc = 1;
-            while(tc-- > 0){
-                // write code here
-                int a = in.nextInt();
-                String b = in.nextLine();
-                
-                out.println(a+" "+b);
-            }
+            while(tc-- > 0) solve();
             out.close();
         } catch (Exception e) {
             return;
         }
+    }
+    
+    private static solve() {
+      
     }
 }
